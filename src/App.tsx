@@ -1,11 +1,24 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import Admin from "./pages/Admin";
+import NotFound from "./pages/NotFound";
+import ProjectDetails from "./pages/ProjectDetails";
+import { Toaster } from "sonner";
+import { CVLinksProvider } from "./contexts/CVLinksContext";
+
 function App() {
   return (
-    <div className="bg-gray-100 min-h-screen p-8">
-      <h1 className="text-3xl font-bold text-blue-600">
-        Hello Tailwind with Vite + React!
-      </h1>{" "}
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+    <CVLinksProvider>
+      <BrowserRouter>
+        <Toaster richColors position="top-right" />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/project/:id" element={<ProjectDetails />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </CVLinksProvider>
   );
 }
 
