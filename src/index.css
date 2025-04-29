@@ -64,16 +64,6 @@
     --ring: 213 27% 84%;
   }
 
-  * {
-    @apply border-border;
-    scroll-behavior: smooth;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
-
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -98,10 +88,6 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-portfolio-blue to-portfolio-purple;
   }
 
   .animation-delay-200 {
@@ -174,10 +160,6 @@
   text-align: left;
 }
 
-.section {
-  @apply py-16 md:py-24 px-6 md:px-8 lg:px-12;
-}
-
 .animate-blink {
   animation: blink 0.8s infinite;
 }
@@ -187,15 +169,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.prose {
-  @apply max-w-none;
-  line-height: 1.8;
-}
-
-.prose p {
-  @apply mb-4;
 }
 
 textarea {
