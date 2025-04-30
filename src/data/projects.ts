@@ -100,30 +100,4 @@ Interactive Recipe Cards: View detailed recipe information including ingredients
     liveUrl: "https://dynamic-form-builder-nine.vercel.app/",
     category: "frontend",
   },
-  {
-    id: 7,
-    title: "E-commerce Platform",
-    description:
-      "A comprehensive e-commerce solution with product management, cart functionality, and payment processing.",
-    cover: "/placeholder.svg",
-    images: ["/placeholder.svg", "/placeholder.svg"],
-    video: "https://www.youtube.com/watch?v=Dk-VyghPmU4",
-    tags: ["React", "Node.js", "MongoDB", "Web"],
-    githubUrl: "#",
-    liveUrl: "#",
-    category: "frontend",
-  },
-  {
-    id: 8,
-    title: "Weather App",
-    description:
-      "A beautiful weather application providing real-time forecasts and weather data visualization.",
-    cover: "/placeholder.svg",
-    images: ["/placeholder.svg", "/placeholder.svg"],
-    video: "https://www.youtube.com/watch?v=ER57Ak-sOOk",
-    tags: ["React", "API", "Mobile"],
-    githubUrl: "#",
-    liveUrl: "#",
-    category: "fullstack",
-  },
 ];
