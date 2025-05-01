@@ -4,6 +4,7 @@ import { Input } from "../ui/input";
 import { Send } from "lucide-react";
 import { toast } from "sonner";
 import { Textarea } from "../ui/textarea";
+import { Resend } from "resend";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -26,15 +27,21 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-      };
+      const resend = new Resend("re_9HgPoa2q_8dcPFVhaDUrs9j5Ro6JpR7FZ");
 
-      console.log("Email would be sent with:", templateParams);
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await resend.emails.send({
+        from: "Portfolio Contact <onboarding@resend.dev>",
+        to: "moahamed.eyada.ma@gmail.com", // Replace with your email
+        subject: `New Contact Form Submission: ${formData.subject}`,
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${formData.name}</p>
+          <p><strong>Email:</strong> ${formData.email}</p>
+          <p><strong>Subject:</strong> ${formData.subject}</p>
+          <p><strong>Message:</strong></p>
+          <p>${formData.message}</p>
+        `,
+      });
 
       toast.success("Message sent successfully! I'll get back to you soon.");
 

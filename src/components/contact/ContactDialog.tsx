@@ -16,12 +16,12 @@ interface ContactDialogProps {
 
 const ContactDialog = ({ isOpen, onOpenChange }: ContactDialogProps) => {
   const openWhatsapp = () => {
-    window.open(`https://wa.me/201289223643`, "_blank");
+    window.open(`https://wa.me/201555389865`, "_blank");
     onOpenChange(false);
   };
 
   const openPhoneCall = () => {
-    window.open(`tel:+201289223643`, "_blank");
+    window.open(`tel:+201555389865`, "_blank");
     onOpenChange(false);
   };
 
