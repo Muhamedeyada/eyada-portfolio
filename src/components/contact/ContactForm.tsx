@@ -4,7 +4,7 @@ import { Input } from "../ui/input";
 import { Send } from "lucide-react";
 import { toast } from "sonner";
 import { Textarea } from "../ui/textarea";
-import { Resend } from "resend";
+import emailjs from "../../lib/emailjs";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -26,22 +26,50 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      const resend = new Resend("re_9HgPoa2q_8dcPFVhaDUrs9j5Ro6JpR7FZ");
+    // Validate form data
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.subject ||
+      !formData.message
+    ) {
+      toast.error("Please fill in all fields");
+      setIsSubmitting(false);
+      return;
+    }
 
-      await resend.emails.send({
-        from: "Portfolio Contact <onboarding@resend.dev>",
-        to: "moahamed.eyada.ma@gmail.com", // Replace with your email
-        subject: `New Contact Form Submission: ${formData.subject}`,
-        html: `
-          <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${formData.name}</p>
-          <p><strong>Email:</strong> ${formData.email}</p>
-          <p><strong>Subject:</strong> ${formData.subject}</p>
-          <p><strong>Message:</strong></p>
-          <p>${formData.message}</p>
-        `,
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast.error("Please enter a valid email address");
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const templateParams = {
+        to_name: "Mohamed", // Your name
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      };
+
+      console.log("EmailJS Configuration:", {
+        serviceId: "service_0w5fzla",
+        templateId: "template_0w5fzla",
+        publicKey: "ZN8ReAWUZ3GdrmGpx",
+        templateParams,
       });
+
+      const result = await emailjs.send(
+        "service_0w5fzla",
+        "template_0w5fzla",
+        templateParams,
+        "ZN8ReAWUZ3GdrmGpx"
+      );
+
+      console.log("Email sent successfully:", result);
 
       toast.success("Message sent successfully! I'll get back to you soon.");
 
@@ -52,7 +80,11 @@ const ContactForm = () => {
         message: "",
       });
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.error("Detailed error sending email:", error);
+      if (error instanceof Error) {
+        console.error("Error message:", error.message);
+        console.error("Error stack:", error.stack);
+      }
       toast.error("Failed to send message. Please try again later.");
     } finally {
       setIsSubmitting(false);
