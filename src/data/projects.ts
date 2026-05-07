@@ -85,12 +85,12 @@ export const projectsData: Project[] = [
     title: "GitHub-like App",
     description:
       "A clone of GitHub features including repository exploration, user profiles, and activity tracking, using Passport.js for authentication.",
-    cover: "/github_clone.png",
-    images: ["/github_clone.png"],
+    cover: "/github_clone.jpg",
+    images: ["/github_clone.jpg"],
     video: null,
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Passport.js"],
     githubUrl: "https://github.com/Muhamedeyada",
-    liveUrl: "#",
+    liveUrl: "https://github-project-tan.vercel.app/",
     category: "fullstack",
   },
   {
@@ -103,7 +103,7 @@ export const projectsData: Project[] = [
     video: null,
     tags: ["React.js", "Node.js", "Express.js", "MongoDB"],
     githubUrl: "https://github.com/Muhamedeyada/ReactBlog",
-    liveUrl: "#",
+    liveUrl: "https://reactblog.vercel.app/",
     category: "fullstack",
   },
   {
