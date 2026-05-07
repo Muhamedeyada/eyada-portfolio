@@ -105,6 +105,13 @@ const ProjectsSection = () => {
               All
             </Button>
             <Button
+              variant={filter === "fullstack" ? "default" : "outline"}
+              onClick={() => setFilter("fullstack")}
+              className="px-6"
+            >
+              Full Stack
+            </Button>
+            <Button
               variant={filter === "frontend" ? "default" : "outline"}
               onClick={() => setFilter("frontend")}
               className="px-6"
@@ -169,13 +176,13 @@ const ProjectsSection = () => {
           <div className="space-y-4">
             <div className="aspect-video bg-muted rounded-md overflow-hidden">
               <img
-                src={selectedProject?.image}
+                src={selectedProject?.cover || "/placeholder.svg"}
                 alt={selectedProject?.title}
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="flex flex-wrap gap-2">
-              {selectedProject?.technologies?.map((tech) => (
+              {selectedProject?.tags?.map((tech) => (
                 <span
                   key={tech}
                   className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
