@@ -98,12 +98,12 @@ export const projectsData: Project[] = [
     title: "MERN Blog Platform",
     description:
       "A comprehensive blog platform with full CRUD functionality. Allows users to create, manage, and share content seamlessly within a modern web interface.",
-    cover: "/blog.png",
-    images: ["/blog.png"],
+    cover: "/blog.jpg",
+    images: ["/blog.jpg"],
     video: null,
     tags: ["React.js", "Node.js", "Express.js", "MongoDB"],
     githubUrl: "https://github.com/Muhamedeyada/ReactBlog",
-    liveUrl: "https://reactblog.vercel.app/",
+    liveUrl: "https://react-blog-nine-rho.vercel.app/",
     category: "fullstack",
   },
   {
