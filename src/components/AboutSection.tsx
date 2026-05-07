@@ -33,9 +33,9 @@ const AboutSection = () => {
           </h2>
           <p className="text-muted-foreground max-w-2xl mt-6">
             I'm a passionate{" "}
-            <span className="text-primary font-medium">Frontend Developer</span>{" "}
-            with expertise in modern JavaScript frameworks and a strong
-            foundation in full-stack development.
+            <span className="text-primary font-medium">Full Stack Developer</span>{" "}
+            with over 2 years of experience building scalable web applications and
+            delivering high-quality products across the entire stack.
           </p>
         </div>
 
@@ -44,24 +44,23 @@ const AboutSection = () => {
             <h3 className="text-2xl font-bold mb-6">My Journey</h3>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                I graduated with a degree in Electrical Power Engineering, but
-                my interest in technology led me to shift careers into web
-                development. I joined the ITI scholarship program, where I
-                studied the MEARN stack in depth and built several full-stack
-                projects.
+                I graduated from Port Said University with a degree in Electrical
+                Engineering, but my passion for technology led me to transition
+                into software engineering. I joined the Information Technology
+                Institute (ITI) scholarship, where I specialized in the MEARN stack.
               </p>
               <p>
-                After exploring both frontend and backend development, I found
-                my passion in frontend — creating clean, responsive, and
-                user-friendly interfaces. I’ve gained hands-on experience with
-                React, Next.js, and Angular, and enjoy bringing designs to life
-                through modern JavaScript frameworks.
+                Currently, I am a Software Engineer at{" "}
+                <span className="text-primary">Dexi</span>, where I build robust
+                backend services with Django and dynamic frontends with React.js.
+                Prior to this, I worked at <span className="text-primary">Xmotion</span>{" "}
+                as a Full-Stack Developer using Angular and Node.js.
               </p>
               <p>
-                I’m always working to improve my skills and stay current with
-                the latest tools and practices in frontend development. I focus
-                on writing maintainable code and building experiences that are
-                both functional and visually appealing.
+                My experience spans across various frameworks including Next.js,
+                NestJS, and Django. I focus on creating seamless user experiences
+                integrated with scalable backend architectures, always striving to
+                write clean, maintainable code.
               </p>
             </div>
           </div>

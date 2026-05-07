@@ -40,7 +40,7 @@ const Footer = () => {
                 Mohamed Eyada
               </span>
               <span className="text-sm text-muted-foreground">
-                Frontend Developer
+                Full Stack Developer
               </span>
             </div>
           </div>

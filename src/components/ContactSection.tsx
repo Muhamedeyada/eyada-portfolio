@@ -25,9 +25,9 @@ const ContactSection = () => {
     {
       icon: <MapPin className="h-5 w-5" />,
       title: "Location",
-      content: "Portsaid, Egypt",
+      content: "Cairo, Egypt",
       subContent: "Open to relocation",
-      link: "https://www.google.com/maps/place/Port+Saied,+Port+Saied+Governorate/@31.2565,32.2841,12z",
+      link: "https://www.google.com/maps/place/Cairo,+Cairo+Governorate/@30.0444,31.2357,12z",
     },
   ];
 

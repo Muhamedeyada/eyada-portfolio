@@ -5,7 +5,14 @@ import { useTheme } from "../components/ThemeProvider";
 import ScrollToTop from "./ScrollToTop";
 import { useIsMobile } from "../hooks/use-mobile";
 
-const roles: string[] = ["Frontend Developer", "Full Stack Developer"];
+const roles: string[] = [
+  "Full Stack Developer",
+  "Software Engineer",
+  "Django Developer",
+  "React Developer",
+  "Angular Developer",
+  "React Native Developer",
+];
 const HeroSection = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { theme } = useTheme();
@@ -86,13 +93,13 @@ const HeroSection = () => {
                   isMobile ? "text-justify" : ""
                 }`}
               >
-                "I craft responsive websites and dynamic web apps with modern
-                technologies, specializing in{" "}
-                <span className="text-primary">React</span>,{" "}
-                <span className="text-primary">Angular</span> and{" "}
-                <span className="text-accent"> Next.js</span> . With full-stack
-                MERN expertise, I bridge seamless user experiences with robust
-                backend solutions."
+                "I am a{" "}
+                <span className="text-primary">Full-Stack Engineer</span> with
+                2+ years of experience building scalable web applications.
+                Skilled in end-to-end development, I deliver high-quality,
+                impactful products across{" "}
+                <span className="text-primary">Frontend</span> and{" "}
+                <span className="text-accent">Backend</span>."
               </p>
             </div>
           </div>
