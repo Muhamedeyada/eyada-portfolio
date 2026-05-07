@@ -58,8 +58,8 @@ export const projectsData: Project[] = [
     title: "Real Time Chat Application",
     description:
       "A real-time messaging platform using WebSockets, Node.js, and PostgreSQL to ensure fast and reliable communication.",
-    cover: "/chat.png",
-    images: ["/chat.png"],
+    cover: "/chat.jpg",
+    images: ["/chat.jpg"],
     video: null,
     tags: ["React.js", "Node.js", "PostgreSQL", "Express.js", "WebSockets"],
     githubUrl: "https://github.com/Muhamedeyada/Real-time-chat",
